@@ -20,7 +20,7 @@ function addNewItem(a) {
   if (a.keyCode == 13 && list.style.display != 'none') {
       let line = document.createElement('li');
       line.className = 'new_list item';
-      line.setAttribute('addNewElement', true);
+      line.setAttribute('draggable', true);
       line.innerHTML = `${input.value}<ion-icon name="close-outline" class="close"></ion-icon>`;
 
       let listMain = document.querySelector('#listMain');
@@ -32,13 +32,14 @@ function addNewItem(a) {
       console.log(list.style.display);
       
       deleteItem();
-      dragAreaFunc();
+      newElementAreaFunction();
   }
 }
 
 function addNewInput(e) {
   list.style.display = 'flex';
   document.getElementById("inputMain").focus();
+ // document.getElementById("inputMain").setAttribute("autofocus")
 }
 
 function deleteItem() {
@@ -93,12 +94,13 @@ sortingArray.sort().reverse();
 
   for (let i = 0; i < (listChoice.length) ; i++) {
     listChoice[i].innerHTML = sortingArray[i];
+    deleteItem();
   }
   newElementAreaFunction}
 
 function newElementAreaFunction() {
   const newElement = document.querySelector('.wrap');
-  new Sortable(drag, {
+  new Sortable(newElement, {
     animation: 350
   })
 }

@@ -83,6 +83,9 @@
         border: 0.087vw solid #c4c4c4;
         border-radius: 0.868vw;
         margin: 1.736vw auto;
+        overflow: auto;
+        overflow-x: hidden;
+        max-height: 18vw;
     }
     .listText{
         display: flex;
