@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-.new_list{
+
+.new_list {
     font-size: 1.382vw;
     font-weight: 400;
     display: flex;
@@ -11,20 +12,23 @@
     font-style: normal;
     margin: .4vw 0;
 }
+
 @media screen and (min-width: 1152px) {
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         list-style: none;
     }
-    .container{
+
+    .container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
     }
-    .block{
+
+    .block {
         width: 29.167vw;
         text-align: center;
         border: 0.086vw solid #c4c4c4;
@@ -32,14 +36,16 @@
         display: flex;
         flex-direction: column;
     }
-    .yellowline{
+
+    .yellowline {
         background-color: #FFDC40;
         width: 29vw;
         height: 2.531vw;
         border-top-left-radius: 0.8vw;
         border-top-right-radius: 0.8vw;
     }
-    .toDoList{
+
+    .toDoList {
         line-height: 2.951vw;
         font-size: 2.431vw;
         font-weight: 900;
@@ -47,37 +53,44 @@
         margin-top: 1.128vw;
         color: black;
     }
-    .icon1{
+
+    .icon1 {
         opacity: 0.233232;
         margin-left: 21.459vw;
         margin-bottom: -0.867vw;
-        padding-top: 0.959vw; 
+        padding-top: 0.959vw;
         transition: opacity .3s;
     }
-    .icon1:hover{
+
+    .icon1:hover {
         opacity: 2;
     }
-    .icon1 img{
+
+    .icon1 img {
         width: 2.17vw;
         height: 1.302vw;
         cursor: pointer;
     }
-    .icon2{
+
+    .icon2 {
         display: none;
         opacity: 0.233232;
         margin-left: 24.17vw;
         margin-bottom: -0.367vw;
-        padding-top: 0.7vw; 
+        padding-top: 0.7vw;
         transition: opacity 0.4s;
     }
-    .icon2:hover{
+
+    .icon2:hover {
         opacity: 2;
     }
+
     .icon2 img {
         width: 2.17vw;
         height: 1.302vw;
         cursor: pointer;
     }
+
     .blocklist {
         width: 24.826vw;
         border: 0.087vw solid #c4c4c4;
@@ -87,13 +100,15 @@
         overflow-x: hidden;
         max-height: 18vw;
     }
-    .listText{
+
+    .listText {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        flex-direction: column;   
+        flex-direction: column;
     }
-    input{
+
+    input {
         border: none;
         font-family: 'Roboto';
         width: 16.493vw;
@@ -102,7 +117,8 @@
         padding: 1.277vw 0;
         line-height: 1.389vw;
     }
-    .close{
+
+    .close {
         width: 1.594vw;
         height: 1.594vw;
         margin-top: 1vw;
@@ -114,11 +130,13 @@
         border-radius: 50%;
         border: 0.2vw solid #c4c4c4;
     }
-    .close:hover{
+
+    .close:hover {
         opacity: 2;
         background-color: #833AE0;
     }
-    button{
+
+    button {
         background-color: #833AE0;
         width: 13.021vw;
         height: 3.646vw;
@@ -128,57 +146,65 @@
         transition: background-color 0.3s;
         outline: none;
     }
-    button:hover{
+
+    button:hover {
         background-color: #681fc7;
     }
-    .buttonMain{
+
+    .buttonMain {
         display: flex;
         justify-content: center;
         margin-bottom: 1.2vw;
     }
-    button .plus{
+
+    button .plus {
         display: inline-block;
         width: 3.646vw;
         height: 3.646vw;
         background: #9953F1;
-        border-radius: 6.164vw; 
+        border-radius: 6.164vw;
         color: #fff;
         margin-left: -9.375vw;
         font-size: 1.18vw;
         transition: background-color 0.3s;
     }
-    button:hover .plus{
+
+    button:hover .plus {
         background-color: #9042f0;
     }
-    .plus p{
+
+    .plus p {
         margin-top: 1.081vw;
         font-size: 1.389vw;
     }
-    button .add{
+
+    button .add {
         width: 11.198vw;
-        height: 3.646vw;     
+        height: 3.646vw;
         font-style: normal;
         font-weight: 400;
         font-size: 1.215vw;
         line-height: 1.389vw;
         display: flex;
         align-items: center;
-        text-align: center;  
-        color: #FFFFFF; 
+        text-align: center;
+        color: #FFFFFF;
         margin-top: -3.646vw;
         padding-left: 5.611vw;
-         font-family: 'Roboto';
+        font-family: 'Roboto';
     }
-    #listMain{
+
+    #listMain {
         display: flex;
         flex-direction: column;
         width: 19.1vw;
     }
-      
-    .list{
+
+    .list {
         display: flex;
     }
-    .new_list_words{
+
+    .new_list_words {
         font-size: 1.18vw;
     }
 }

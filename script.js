@@ -18,28 +18,28 @@ let list = document.querySelector('.list');
 function addNewItem(a) {
 
   if (a.keyCode == 13 && list.style.display != 'none') {
-      let line = document.createElement('li');
-      line.className = 'new_list item';
-      line.setAttribute('draggable', true);
-      line.innerHTML = `${input.value}<ion-icon name="close-outline" class="close"></ion-icon>`;
+    let line = document.createElement('li');
+    line.className = 'new_list item';
+    line.setAttribute('draggable', true);
+    line.innerHTML = `${input.value}<ion-icon name="close-outline" class="close"></ion-icon>`;
 
-      let listMain = document.querySelector('#listMain');
-      listMain.appendChild(line);
+    let listMain = document.querySelector('#listMain');
+    listMain.appendChild(line);
 
-      input.value = '';
-      list.style.display = 'none';
-      blocklist.style.paddingBottom = " 0.629vw";
-      console.log(list.style.display);
-      
-      deleteItem();
-      newElementAreaFunction();
+    input.value = '';
+    list.style.display = 'none';
+    blocklist.style.paddingBottom = " 0.629vw";
+    console.log(list.style.display);
+
+    deleteItem();
+    newElementAreaFunction();
   }
 }
 
 function addNewInput(e) {
   list.style.display = 'flex';
   document.getElementById("inputMain").focus();
- // document.getElementById("inputMain").setAttribute("autofocus")
+  // document.getElementById("inputMain").setAttribute("autofocus")
 }
 
 function deleteItem() {
@@ -75,28 +75,29 @@ function sortingFunction() {
 
   deleteItem();
   let icon2 = document.querySelector('.icon2');
-  icon1.style.display='none';
-  icon2.style.display='flex';
+  icon1.style.display = 'none';
+  icon2.style.display = 'flex';
 
   newElementAreaFunction();
 }
 
 function sortingReverseFunction() {
-  icon2.style.display='none';
-  icon1.style.display='block';
+  icon2.style.display = 'none';
+  icon1.style.display = 'block';
 
-  listChoice=document.querySelectorAll('li');
-  sortingArray=[];
+  listChoice = document.querySelectorAll('li');
+  sortingArray = [];
   listChoice.forEach(element => {
     sortingArray.push(element.innerHTML);
-})
-sortingArray.sort().reverse();
+  })
+  sortingArray.sort().reverse();
 
-  for (let i = 0; i < (listChoice.length) ; i++) {
+  for (let i = 0; i < (listChoice.length); i++) {
     listChoice[i].innerHTML = sortingArray[i];
     deleteItem();
   }
-  newElementAreaFunction}
+  newElementAreaFunction
+}
 
 function newElementAreaFunction() {
   const newElement = document.querySelector('.wrap');
