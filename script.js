@@ -14,8 +14,7 @@ let input = document.querySelector('#mainpart');
 document.getElementById("mainpart").focus();
 
 let list = document.querySelector('.list');
-
-let liText = document.querySelector(".blocklist")
+let scrl = document.querySelector(".blocklist")
 function addNewItem(a) {
 
   if (a.keyCode == 13 && list.style.display != 'none') {
@@ -31,18 +30,16 @@ function addNewItem(a) {
     list.style.display = 'none';
     blocklist.style.paddingBottom = " 0.629vw";
     console.log(list.style.display);
-    liText.scrollTop = liText.scrollHeight
+    scrl.scrollTop = scrl.scrollHeight
     deleteItem();
     newElementAreaFunction();
-    
   }
 }
 
 function addNewInput(e) {
   list.style.display = 'flex';
-  liText.scrollTop = liText.scrollHeight
+  scrl.scrollTop = scrl.scrollHeight
   document.getElementById("inputMain").focus();
-  
   // document.getElementById("inputMain").setAttribute("autofocus")
 }
 
@@ -54,7 +51,7 @@ function deleteItem() {
     item.addEventListener('click', (e) => {
       if (e.target.className.includes('close')) {
 
-        e.target.arentElement.remove();
+        e.target.parentElement.remove();
 
         if (listMain.childElementCount == 0) {
           list.style.display = 'flex';
@@ -108,5 +105,4 @@ function newElementAreaFunction() {
   new Sortable(newElement, {
     animation: 350
   })
-  
 }
